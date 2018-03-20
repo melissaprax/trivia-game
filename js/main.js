@@ -36,14 +36,33 @@ function letsGo() {
     for (var i=0; i< qAndAs.length; i++) {
         $(".js-questions").append("<p>" + qAndAs[i].question + "</p>");
     for (var j=0; j < qAndAs[i].answer.length; j++) {
-        $(".js-questions").append('<input type="radio">' + qAndAs[i].answer[j] + '</input>');
+        $(".js-questions").append('<input type="radio" value=' + qAndAs[i].answer[j] + '" name="' + i + '">' + qAndAs[i].answer[j] + '</input>');
     }
     }
 }
 
+function letsStop() {
+    $(".js-questions input:checked").each(function() {
+        //if value = correct q / a add 1 to score
+        let checkAnswer = $(this).val();
+        if (checkAnswer === question$[(this).attr()].correct) {
+            console.log("YAS QWEEN");
+        }
+        else {
+            console.log("Down with the patriarchy");
+        }
+    })
+}
+
 //when user presses start, show questions and four answers
-$('.js-button').on('click', function(){
+$('.js-start').on('click', function(){
     letsGo();
+    
+});
+
+//To stop the game when user presses on button
+$('.js-end').on('click', function(){
+    letsStop();
     
 });
 

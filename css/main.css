@@ -1,0 +1,27 @@
+.b-g-r {
+    background-color: magenta;
+}
+.d-f {
+    display: flex; 
+}
+.center {
+    justify-content: center;
+}
+.s-b {
+    justify-content: center;
+}
+.image {
+    width: 206px;
+    height: 292.5px; 
+}
+.normal-image {
+
+}
+.blend-image {
+    background-image: url(./images/pic.jpg);
+    background-color: magenta;
+    background-blend-mode: multiply;
+}
+.t-a-c {
+    text-align: center;
+}
