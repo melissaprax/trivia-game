@@ -29,6 +29,22 @@ let qAndAs = [
     },
 ];
 
+//building timer. Setting variables for timer
+let timer = null; 
+let interval = 1000;
+let value = 100;
+
+//timer function (will call in on click start function)
+function theTimer() {
+    
+}
+
+// function timer() {
+// timer = setInterval(function() {
+//     (--value);
+// }, interval);
+// $(".js-timer").append(this);
+// }
 
 
 //functions
@@ -36,7 +52,7 @@ function letsGo() {
     for (var i=0; i< qAndAs.length; i++) {
         $(".js-questions").append("<p>" + qAndAs[i].question + "</p>");
     for (var j=0; j < qAndAs[i].answer.length; j++) {
-        $(".js-questions").append('<input type="radio" value=' + qAndAs[i].answer[j] + '" name="' + i + '">' + qAndAs[i].answer[j] + '</input>');
+        $(".js-questions").append('<input type="radio" value= ' + qAndAs[i].answer[j] + '" name= "' + i + '">' + qAndAs[i].answer[j] + '</input>');
     }
     }
 }
@@ -55,12 +71,14 @@ function letsStop() {
 }
 
 //when user presses start, show questions and four answers
+//put timer start in NEED TO DO
 $('.js-start').on('click', function(){
     letsGo();
-    
+    timer();
 });
 
 //To stop the game when user presses on button
+//put timer stop in NEED TO DO
 $('.js-end').on('click', function(){
     letsStop();
     

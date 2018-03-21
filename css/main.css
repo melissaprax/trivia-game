@@ -13,15 +13,17 @@
 .image {
     width: 206px;
     height: 292.5px; 
-}
-.normal-image {
-
-}
-.blend-image {
-    background-image: url(./images/pic.jpg);
-    background-color: magenta;
     background-blend-mode: multiply;
 }
 .t-a-c {
     text-align: center;
+}
+.f-f {
+    font-family: 'Comfortaa', cursive;
+}
+.f-s40 {
+    font-size: 40px; 
+}
+.f-s20 {
+    font-size: 20px; 
 }
