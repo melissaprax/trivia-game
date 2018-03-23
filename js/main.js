@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$( document ).ready(function() {
 
 //questions and answers (in object)
 let qAndAs = [
@@ -30,59 +30,23 @@ let qAndAs = [
 ];
 
 //building timer. Setting variables for timer
-// let interval;
-// let number = 100;
+let seconds = 60;
+let number;
 
-// //timer function (will call in on click start function)
-// function theTimer() {
-//     intervalId = setInterval(decrement, 1000);
-// }
+//timer function (will call in on click start function)
+function theTimer() {
+    $(".js-timer").append();
+    let no = number-1;
+    seconds--;
+    //still need to output. this isn't working. 
+    //NEED TO DO THIS. Create function so that when 
+    //timer runs out, it goes to final page of game 
+    //which shows wins / losses
+    $(".js-timer").no.toString();
+        if( seconds > 0 ) {
+            theTimer(decrease, 1000);
+}
 
-// function countDown() {
-//     number--;
-//       $(".js-timer").html("<h2>" + number + "</h2>");
-//       if (number === 0) {
-//         gameOver(); 
-// //NEED TO DO THIS. Create function so that when timer runs out, it goes to final page of game which shows wins / losses
-//       }
-// }
-
-// var number = 100;
-
-//     var intervalId;
-
-//     $("#stop").on("click", stop);
-//     $("#resume").on("click", run);
-
-//     function run() {
-//       intervalId = setInterval(decrement, 1000);
-//     }
-
-//     function decrement() {
-//       number--;
-//       $("#show-number").html("<h2>" + number + "</h2>");
-//       if (number === 0) {
-//         stop();
-//         // alert("Time Up!");
-//       }
-//     }
-
-//     function stop() {
-//       clearInterval(intervalId);
-//     }
-
-//     run();
-
-
-// function timer() {
-// timer = setInterval(function() {
-//     (--value);
-// }, interval);
-// $(".js-timer").append(this);
-// }
-
-
-//functions
 
 //NEED TO DO. Append this as an entire new page so start button will disappear
 function letsGo() {
@@ -94,30 +58,32 @@ function letsGo() {
     }
 }
 
+
+//function to check answers / output them 
 function letsStop() {
     $(".js-questions input:checked").each(function() {
         //if value = correct q / a add 1 to score
         let checkAnswer = $(this).val();
-        if (checkAnswer === qAndAs.question[$(this).attr()].correct) {
+        if (checkAnswer === qAndAs[$(this).attr("name")].correct) {
             console.log("YAS QWEEN");
+            $(".js-output").append(correct);
         }
         else {
             console.log("Down with the patriarchy");
+            $(".js-output").append();
         }
     })
 }
 
-//NEED TO DO make function that will output checked answers and display correct / incorrect in js-output div
-
 //when user presses start, show questions and four answers
-//put timer start in NEED TO DO
+//put timer start in
 $('.js-start').on('click', function(){
     letsGo();
 
 });
 
 //To stop the game when user presses on button
-//put timer stop in NEED TO DO
+//put timer stop in 
 $('.js-end').on('click', function(){
     letsStop();
     
@@ -134,15 +100,3 @@ $('.js-end').on('click', function(){
 
 
 
-
-// when user presses start, open new page. 
-//how to show new screen. replace div, ??
-
-//once new page opens, timer begins 
-//end game when done button is clicked
-//record and compare
-//collect click for each answer 
-//compare click to correct answer 
-//if correct, record
-//if incorrect, record as incorrect
-//after final click, show results page 
