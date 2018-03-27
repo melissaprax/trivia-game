@@ -29,23 +29,23 @@ let qAndAs = [
     },
 ];
 
-//building timer. Setting variables for timer
-let seconds = 60;
-let number;
+// //building timer. Setting variables for timer
+// let seconds = 60;
+// let number;
 
-//timer function (will call in on click start function)
-function theTimer() {
-    $(".js-timer").append();
-    let no = number-1;
-    seconds--;
-    //still need to output. this isn't working. 
-    //NEED TO DO THIS. Create function so that when 
-    //timer runs out, it goes to final page of game 
-    //which shows wins / losses
-    $(".js-timer").no.toString();
-        if( seconds > 0 ) {
-            theTimer(decrease, 1000);
-}
+// //timer function (will call in on click start function)
+// function theTimer() {
+//     $(".js-timer").append();
+//     let no = number-1;
+//     seconds--;
+//     //still need to output. this isn't working. 
+//     //NEED TO DO THIS. Create function so that when 
+//     //timer runs out, it goes to final page of game 
+//     //which shows wins / losses
+//     $(".js-timer").no.toString();
+//         if( seconds > 0 ) {
+//             theTimer(decrease, 1000);
+// }
 
 
 //NEED TO DO. Append this as an entire new page so start button will disappear
